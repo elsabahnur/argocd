@@ -15,29 +15,29 @@ patches:
       version: v1
       kind: Endpoints
       name: kube-prometheus-stack-kube-etcd
-  path: replace-ns.yaml
+  path: patches/replace-ns.yaml
 - target:
       version: v1
       kind: Service
       name: kube-prometheus-stack-kube-scheduler
-  path: replace-ns.yaml
+  path: patches/replace-ns.yaml
 - target:
       version: v1
       kind: Service
       name: kube-prometheus-stack-coredns
-  path: replace-ns.yaml
+  path: patches/replace-ns.yaml
 - target:
       version: v1
       kind: Service
       name: kube-prometheus-stack-kube-controller-manager
-  path: replace-ns.yaml
+  path: patches/replace-ns.yaml
 - target:
       version: v1
       kind: Service
       name: kube-prometheus-stack-kube-proxy
-  path: replace-ns.yaml
+  path: patches/replace-ns.yaml
 - target:
       version: v1
       kind: Service
       name: kube-prometheus-stack-kube-etcd
-  path: replace-ns.yaml
+  path: patches/replace-ns.yaml
