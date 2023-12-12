@@ -6,17 +6,17 @@ metadata:
 spec:
   generators:
     - git:
-        repoURL: https://gitlab-dev.tech.moex.com/mp/ops/infra-k8s
+        repoURL: https://github.com/elsabahnur/argocd.git
         revision: HEAD
         directories:
-          - path: clusters/craml-dev/*
+          - path: argocd/*
   template:
     metadata:
       name: '{{path.basename}}'
     spec:
       project: addons
       source:
-        repoURL: https://gitlab-dev.tech.moex.com/mp/ops/infra-k8s
+        repoURL: https://github.com/elsabahnur/argocd.git
         targetRevision: HEAD
         path: '{{path}}'
       destination:
