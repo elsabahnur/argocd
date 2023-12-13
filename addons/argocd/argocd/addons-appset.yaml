@@ -9,19 +9,21 @@ spec:
         repoURL: https://github.com/elsabahnur/argocd.git
         revision: HEAD
         directories:
-          - path: addons/*
+          - path: addons/*           
   template:
     metadata:
-      name: '{{ path[2] }}'  
+      name: '{{.path.basename}}'  
     spec:
       project: addons
       source:
         repoURL: https://github.com/elsabahnur/argocd.git
         targetRevision: HEAD
         path: '{{path}}'
+        directory:
+          recurse: true
       destination:
         server: https://kubernetes.default.svc
-        namespace: '{{ path[1] }}' 
+        namespace: '{{path[1]}}' 
 #      syncPolicy:
 #        automated: {}
 #        syncOptions:
