@@ -12,7 +12,7 @@ spec:
           - path: addons/*
   template:
     metadata:
-      name: '{{path.basename}}' 
+      name: '{{ path[2] }}'  
     spec:
       project: addons
       source:
@@ -21,7 +21,7 @@ spec:
         path: '{{path}}'
       destination:
         server: https://kubernetes.default.svc
-        namespace: '{{index .path.basename.segments 1}}' 
+        namespace: '{{ path[1] }}' 
 #      syncPolicy:
 #        automated: {}
 #        syncOptions:
