@@ -9,7 +9,7 @@ spec:
         repoURL: https://github.com/elsabahnur/argocd.git
         revision: HEAD
         directories:
-          - path: addons/*           
+          - path: addons/*/*          
   template:
     metadata:
       name: '{{path.basename}}'  
@@ -18,7 +18,7 @@ spec:
       source:
         repoURL: https://github.com/elsabahnur/argocd.git
         targetRevision: HEAD
-        path: '{{path.path}}' #'{{path}}/{{path[2]}}'
+        path: '{{path}}'
       destination:
         server: https://kubernetes.default.svc
-        namespace: '{{path.basename}}' 
+        namespace: '{{path[1]}}' 
