@@ -8,5 +8,4 @@ helmCharts:
   repo: https://istio-release.storage.googleapis.com/charts/
   releaseName: istiod-1-28
   namespace: istio-system
-  valuesInline:
-    revision: canary
+  valuesFile: values.yaml
