@@ -4,7 +4,8 @@ namespace: istio-system
 
 helmCharts:
 - name: istiod
-  version: 1.26.2
+  version: 1.28.3
   repo: https://istio-release.storage.googleapis.com/charts/
-  releaseName: istiod
+  releaseName: istiod-1-28
   namespace: istio-system
+  valuesFile: values.yaml
