@@ -4,6 +4,6 @@ kind: Kustomization
 namespace: istio-system
 helmCharts:
 - name: base
-  version: 1.26.2
+  version: 1.28.3
   repo: https://istio-release.storage.googleapis.com/charts/
-  releaseName: istio-base
+  releaseName: istio-base-1-28
